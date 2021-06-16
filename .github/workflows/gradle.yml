@@ -31,4 +31,4 @@ jobs:
          # Artifact name
          name: oakores-forge # optional
          # Destination path
-         path: /build/lib # optional
+         path: build/lib # optional
