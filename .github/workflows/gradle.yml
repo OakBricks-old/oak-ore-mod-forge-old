@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -25,11 +25,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.4
-      with:
-        # Artifact name
-        name: oakores-forge # optional, default is artifact
-        # A file, directory or wildcard pattern that describes what to upload
-        path: build/libs/
-        # The desired behavior if no files are found using the provided path.
+    - name: capture build artifacts
+      if: ${{ runner.os == 'Linux' && matrix.java == '8' }} # Only upload artifacts built from latest java on one OS
+      uses: actions/upload-artifact@v2
+        with:
+          name: OakOres-Forge-Latest-{$GITHUB_SHA}
+          path: build/libs/
