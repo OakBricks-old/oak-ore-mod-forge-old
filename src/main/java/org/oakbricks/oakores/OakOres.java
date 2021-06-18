@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.oakbricks.oakores.block.RegisterBlock;
 import org.oakbricks.oakores.item.RegisterItem;
 
 import static org.oakbricks.oakores.OakOres.MOD_ID;
@@ -32,7 +33,13 @@ public class OakOres
         bus.addListener(this::setup);
         RegisterItem.ITEMS.register(bus);
         // Register ourselves for server and other game events we are interested in
+
+        RegisterItem.ITEMS.register(bus);
+        RegisterBlock.BLOCKS.register(bus);
+
         MinecraftForge.EVENT_BUS.register(this);
+
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
