@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -24,12 +24,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.4
+      run: ./gradlew build jar --no-daemon
+    - name: capture build artifacts
+      uses: actions/upload-artifact@v2
       with:
-        # Artifact name
-        name: oakores-forge # optional, default is artifact
-        # A file, directory or wildcard pattern that describes what to upload
+        name: OakOres-Forge-Dev
         path: build/libs/
-        # The desired behavior if no files are found using the provided path.
