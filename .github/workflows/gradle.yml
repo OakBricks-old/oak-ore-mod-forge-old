@@ -23,8 +23,12 @@ jobs:
         distribution: 'adopt'
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Setup Decomp Env
-      run: ./gradlew idea
+    - name: Validate no assets
+      run: test ! -d ./src/generated
+    - name: Generate assets
+      run: ./gradlew runData --no-daemon --max-workers 1
+    - name: Validate assets
+      run: test -d ./src/generated -a -f ./src/generated/resources/.cache/cache
     - name: Build with Gradle
       run: ./gradlew build
     - name: capture build artifacts
