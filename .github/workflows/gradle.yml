@@ -29,5 +29,5 @@ jobs:
       if: ${{ runner.os == 'Linux' && matrix.java == '8' }} # Only upload artifacts built from latest java on one OS
       uses: actions/upload-artifact@v2
         with:
-          name: OakOres-Forge-Latest-{$GITHUB_SHA}
+          name: OakOres-Forge-Latest-${{ GITHUB_SHA }}
           path: build/libs/
