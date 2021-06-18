@@ -26,11 +26,11 @@ jobs:
     - name: Validate no assets
       run: test ! -d ./src/generated
     - name: Generate assets
-      run: ./gradlew runData --no-daemon --max-workers 1
+      run: ./gradlew runData --no-daemon
     - name: Validate assets
       run: test -d ./src/generated -a -f ./src/generated/resources/.cache/cache
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build --no-daemon
     - name: capture build artifacts
       uses: actions/upload-artifact@v2
       with:
