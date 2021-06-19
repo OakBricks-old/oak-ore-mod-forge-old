@@ -14,6 +14,10 @@ public class RegisterItem {
 
     public static final RegistryObject<Item> PURPI = ITEMS.register("purpi", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
 
+    public static final RegistryObject<BlockItem> EXAMPLE_BLOCK = ITEMS.register("example_block",
+            () -> new BlockItem(RegisterBlock.EXAMPLE_BLOCK.get(),
+                    new Item.Properties().tab(OakOres.MAIN_GROUP)));
+
     //block items
-    public static final RegistryObject<BlockItem> PURPI_ORE = ITEMS.register("purpi_ore", () -> new BlockItem(RegisterBlock.PURPI_ORE.get(), new Item.Properties().tab(ItemGroup.TAB_MISC)));
+    //public static final RegistryObject<BlockItem> PURPI_ORE = ITEMS.register("purpi_ore", () -> new BlockItem(RegisterBlock.PURPI_ORE.get(), new Item.Properties().tab(ItemGroup.TAB_MISC)));
 }

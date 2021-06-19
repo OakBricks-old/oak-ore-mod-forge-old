@@ -1,5 +1,7 @@
 package org.oakbricks.oakores;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +21,7 @@ public class OakOres
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "oakores";
+    public static final ItemGroup MAIN_GROUP = new MainGroup("oakorestab");
 
     public OakOres() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,4 +43,17 @@ public class OakOres
         // some preinit code
         //LOGGER.info("oakores preinit");
     }
+
+    public static class MainGroup extends ItemGroup {
+
+        public MainGroup(String label) {
+            super(label);
+        }
+
+        @Override
+        public ItemStack makeIcon() {
+            return RegisterItem.PURPI.get().getDefaultInstance();
+        }
+    }
+
 }
