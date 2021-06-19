@@ -16,10 +16,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class RegisterBlock {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, OakOres.MOD_ID);
 
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS
-            .register("example_block",
-                    () -> new Block(AbstractBlock.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
-                            .strength(15f, 30f).harvestTool(ToolType.PICKAXE).harvestLevel(2)
+    public static final RegistryObject<Block> PURPI_BLOCK = BLOCKS
+            .register("purpi_block",
+                    () -> new Block(AbstractBlock.Properties.of(Material.METAL, MaterialColor.COLOR_PURPLE)
+                            .strength(15f, 30f).harvestTool(ToolType.PICKAXE).harvestLevel(3)
                             .sound(SoundType.METAL).requiresCorrectToolForDrops()));
 
 
