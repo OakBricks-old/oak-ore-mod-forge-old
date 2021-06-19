@@ -7,8 +7,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.oakbricks.oakores.block.RegisterBlock;
 import org.oakbricks.oakores.item.RegisterItem;
 
@@ -18,8 +16,6 @@ import static org.oakbricks.oakores.OakOres.MOD_ID;
 @Mod(MOD_ID)
 public class OakOres
 {
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "oakores";
     public static final ItemGroup MAIN_GROUP = new MainGroup("oakorestab");
 
@@ -52,7 +48,7 @@ public class OakOres
 
         @Override
         public ItemStack makeIcon() {
-            return RegisterItem.PURPI.get().getDefaultInstance();
+            return RegisterItem.PURPI_BLOCK.get().getDefaultInstance();
         }
     }
 
