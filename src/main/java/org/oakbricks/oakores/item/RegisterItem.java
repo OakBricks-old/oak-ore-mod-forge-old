@@ -12,9 +12,13 @@ import org.oakbricks.oakores.block.RegisterBlock;
 public class RegisterItem {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OakOres.MOD_ID);
 
-    public static final RegistryObject<Item> PURPI = ITEMS.register("purpi", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
+    public static final RegistryObject<Item> PURPI = ITEMS.register("purpi", () -> new Item(new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
     public static final RegistryObject<BlockItem> PURPI_BLOCK = ITEMS.register("purpi_block",
+            () -> new BlockItem(RegisterBlock.PURPI_BLOCK.get(),
+                    new Item.Properties().tab(OakOres.MAIN_GROUP)));
+
+    public static final RegistryObject<BlockItem> PURPI_ORE = ITEMS.register("purpi_ore",
             () -> new BlockItem(RegisterBlock.PURPI_BLOCK.get(),
                     new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
