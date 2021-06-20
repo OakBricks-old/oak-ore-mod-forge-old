@@ -1,4 +1,4 @@
-package org.oakbricks.oakores.tools.purpi;
+package org.oakbricks.oakores.item.tools.purpi;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
