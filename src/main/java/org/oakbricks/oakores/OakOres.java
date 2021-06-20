@@ -23,7 +23,6 @@ public class OakOres
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the setup method for modloading
         bus.addListener(this::setup);
-        RegisterItem.ITEMS.register(bus);
         // Register ourselves for server and other game events we are interested in
 
         RegisterItem.ITEMS.register(bus);
