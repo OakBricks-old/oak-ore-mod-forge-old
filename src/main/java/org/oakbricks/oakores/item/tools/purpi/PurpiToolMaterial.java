@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public enum PurpiToolMaterial implements IItemTier {
 
-    PURPI_TOOL(4, 6500, 8, 9, 5, () -> Ingredient.of(RegisterItem.PURPI.get()));
+    PURPI_TOOL(4, 6500, 8f, 9f, 5, () -> Ingredient.of(RegisterItem.PURPI.get()));
 
     private final int harvestLevel;
     private final int maxUses;
