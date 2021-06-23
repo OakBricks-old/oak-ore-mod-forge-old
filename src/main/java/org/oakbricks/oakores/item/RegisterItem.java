@@ -19,7 +19,11 @@ public class RegisterItem {
                     new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
     public static final RegistryObject<BlockItem> PURPI_ORE = ITEMS.register("purpi_ore",
-            () -> new BlockItem(RegisterBlock.PURPI_BLOCK.get(),
+            () -> new BlockItem(RegisterBlock.PURPI_ORE.get(),
+                    new Item.Properties().tab(OakOres.MAIN_GROUP)));
+
+    public static final RegistryObject<BlockItem> LEAD_ORE = ITEMS.register("lead_ore",
+            () -> new BlockItem(RegisterBlock.LEAD_ORE.get(),
                     new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
     public static final RegistryObject<Item> PURPI_SWORD = ITEMS.register("purpi_sword",
