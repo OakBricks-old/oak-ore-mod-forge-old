@@ -58,7 +58,7 @@ public class RegisterItem {
             () -> new ArmorItem(ArmorClass.PURPI_ARMOR, EquipmentSlotType.LEGS,
                     new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
-    public static final RegistryObject<Item> purpi_BOOTS = ITEMS.register("purpi_boots",
+    public static final RegistryObject<Item> PURPI_BOOTS = ITEMS.register("purpi_boots",
             () -> new ArmorItem(ArmorClass.PURPI_ARMOR, EquipmentSlotType.FEET,
                     new Item.Properties().tab(OakOres.MAIN_GROUP)));
 
